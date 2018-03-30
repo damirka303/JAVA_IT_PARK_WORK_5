@@ -1,4 +1,4 @@
-import java.util.Scanner; 
+п»їimport java.util.Scanner; 
 
 class Menu{
 		public static void main(String[] args){
@@ -13,7 +13,7 @@ class Menu{
 				Integer i = sc.nextInt();
 				switch (i){
 					case 1:
-						System.out.println("Введите 2 числа: ");
+						System.out.println("В¬РІРµРґРёС‚Рµ 2 С‡РёСЃР»Р°: ");
 						Integer a = sc.nextInt();
 						Integer b = sc.nextInt();
 						if (a>b){
@@ -32,18 +32,18 @@ class Menu{
 						}
 					break;
 					case 2:
-						System.out.println("Введите количество чисел:");
+						System.out.println("В¬РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РёСЃРµР»:");
 						int count = sc.nextInt();
 						int summ = 0;
 						for (int q = count;q>0;q--){
-							System.out.print("Введите число: ");
+							System.out.print("В¬РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 							int x = sc.nextInt();
 							summ = summ + x;
 						}
-						System.out.println("Сумма = " + summ);
+						System.out.println("вЂ”СѓРјРјР° = " + summ);
 					break;
 					case 3:
-						System.out.print("Введите число: ");
+						System.out.print("В¬РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 						int y = sc.nextInt();
 						int ss = 0;
 						while (y!=0){

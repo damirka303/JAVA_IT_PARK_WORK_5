@@ -1,12 +1,12 @@
-import java.util.Scanner;
+п»їimport java.util.Scanner;
 
 class convert{
 	public static void main(String[] args)
 	{
-		System.out.println("Введите число от 0 до 256");
+		System.out.println("В¬РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РѕС‚ 0 РґРѕ 256");
 		Scanner scan = new Scanner(System.in);
 		Integer i = scan.nextInt();
-			if (255/i <= 0) { System.out.print("Введенное число, больше 256");}
+			if (255/i <= 0) { System.out.print("В¬РІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ, Р±РѕР»СЊС€Рµ 256");}
 			else {
 		System.out.print(i+"->");
 		System.out.println(Integer.toBinaryString(i));
