@@ -19,5 +19,17 @@ public class Main {
         moto.addFuel(50);
         moto.go( 499);
         System.out.println(moto.getFuelCount());
+        System.out.println("-------------------------------");
+
+        Aircraft aircraft = new Aircraft("Komfort","benz",50,5000,5000);
+        aircraft.addFuel(5000);
+        aircraft.go( 3000);
+        System.out.println(aircraft.getFuelCount());
+        System.out.println("-------------------------------");
+
+        Tank tank = new Tank("Komfort","benz",50,5000,5000);
+        tank.addFuel(5000);
+        tank.go( 3000);
+        System.out.println(aircraft.getFuelCount());
     }
 }
