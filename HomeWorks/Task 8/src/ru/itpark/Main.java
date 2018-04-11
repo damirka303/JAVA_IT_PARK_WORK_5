@@ -9,16 +9,23 @@ public class Main {
         Krug k = new Krug(7);
         System.out.println(k.getS());
 
-        Oval o = new Oval(10,15);
+        Oval o = new Oval(10, 15);
         System.out.println(o.getS());
 
         Kvadrat kk = new Kvadrat(8);
         System.out.println(kk.getS());
 
-        Prymougolnic p = new Prymougolnic(4,9);
+        Prymougolnic p = new Prymougolnic(4, 9);
         System.out.println(p.getS());
 
-        Treugolnic t = new Treugolnic(7,9);
+        Treugolnic t = new Treugolnic(7, 9);
         System.out.println(t.getS());
+
+        Figura numbers[] = {k, o, kk, p, t};
+
+        for (Figura number : numbers) {
+            System.out.println( number.getS());
+        }
+
     }
 }

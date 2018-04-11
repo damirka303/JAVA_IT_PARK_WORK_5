@@ -9,7 +9,8 @@ public class Figura {
     public Figura(int a) {
         this.a = a;
     }
-    public double getS(){
+
+    public double getS() {
         return a;
     }
 }

@@ -5,12 +5,14 @@ package ru.itpark;
  */
 public class Treugolnic extends Figura {
     private int h;
-    public Treugolnic(int a,int h) {
+
+    public Treugolnic(int a, int h) {
         super(a);
-        this.h=h;
+        this.h = h;
     }
-    public double getS(){
-        double t = super.getS()*h/2;
+
+    public double getS() {
+        double t = super.getS() * h / 2;
         return t;
     }
 }

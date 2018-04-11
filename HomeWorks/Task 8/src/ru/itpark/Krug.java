@@ -9,8 +9,9 @@ public class Krug extends Figura {
     public Krug(int a) {
         super(a);
     }
-    public double getS(){
+
+    public double getS() {
         double q = super.getS();
-        return q*a*Pi;
+        return q * a * Pi;
     }
 }

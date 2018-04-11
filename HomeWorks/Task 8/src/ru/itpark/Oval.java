@@ -6,12 +6,13 @@ package ru.itpark;
 public class Oval extends Krug {
     private int b;
 
-    public Oval(int a,int b) {
+    public Oval(int a, int b) {
         super(a);
-        this.b=b;
+        this.b = b;
     }
-    public double getS(){
-        double t=super.getS();
-        return t*b/a;
+
+    public double getS() {
+        double t = super.getS();
+        return t * b / a;
     }
 }

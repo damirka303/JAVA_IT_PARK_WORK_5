@@ -5,12 +5,14 @@ package ru.itpark;
  */
 public class Prymougolnic extends Kvadrat {
     private int b;
+
     public Prymougolnic(int a, int b) {
         super(a);
-        this.b=b;
+        this.b = b;
     }
-    public double getS(){
+
+    public double getS() {
         double t = super.getS();
-        return t*b/a;
+        return t * b / a;
     }
 }
