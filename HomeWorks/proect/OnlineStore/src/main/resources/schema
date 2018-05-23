@@ -1,0 +1,54 @@
+CREATE TABLE "product_categorie" (
+id SERIAL,
+"code" varchar(255) COLLATE "default",
+"name" varchar(255) COLLATE "default",
+"img" varchar(255) COLLATE "default",
+CONSTRAINT "categorie_pkey" PRIMARY KEY ("id")
+)
+;
+
+CREATE TABLE "product" (
+id SERIAL,
+"categorie_id" int4 NOT NULL,
+"code" varchar(255) COLLATE "default",
+"name" varchar(255) COLLATE "default",
+"img" varchar(255) COLLATE "default",
+CONSTRAINT "product_pkey" PRIMARY KEY ("id"),
+CONSTRAINT "fk_categorie" FOREIGN KEY ("categorie_id") REFERENCES "product_categorie" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+)
+;
+CREATE TABLE "customer" (
+id SERIAL,
+"surname" varchar(255) COLLATE "default",
+"name" varchar(255) COLLATE "default",
+"patronymic" varchar(255) COLLATE "default",
+"number" varchar(255) COLLATE "default",
+"adress" varchar(255) COLLATE "default",
+CONSTRAINT "customer_pkey" PRIMARY KEY ("id")
+)
+;
+
+CREATE TABLE "sale" (
+id SERIAL,
+"customer_id" int4 NOT NULL,
+"date_sale" timestamp(6),
+"count" int4,
+CONSTRAINT "sale_pkey" PRIMARY KEY ("id"),
+CONSTRAINT "fk_customer_id" FOREIGN KEY ("customer_id") REFERENCES "customer" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+)
+;
+
+
+CREATE TABLE "for_sale" (
+id SERIAL,
+"sale_id" int4 NOT NULL,
+"product_id" int4 NOT NULL,
+"count" int4,
+"code" varchar(255) COLLATE "default",
+CONSTRAINT "for_sale_pkey" PRIMARY KEY ("id"),
+CONSTRAINT "fk_sale_id" FOREIGN KEY ("sale_id") REFERENCES "sale" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT "fk_product_id" FOREIGN KEY ("product_id") REFERENCES "product" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION
+)
+;
+
+
